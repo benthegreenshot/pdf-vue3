@@ -1,6 +1,6 @@
 {
   "name": "pdf-vue3",
-  "version": "1.0.12",
+  "version": "1.1.0",
   "description": "vue3 pdf viewer",
   "main": "./dist/pdf-vue3.js",
   "types": "./dist/types/index.d.ts",
@@ -20,14 +20,14 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hymhub/pdf-vue3.git"
+    "url": "git+https://github.com/benthegreenshot/pdf-vue3.git"
   },
   "author": "hyminghan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hymhub/pdf-vue3/issues"
+    "url": "https://github.com/benthegreenshot/pdf-vue3/issues"
   },
-  "homepage": "https://github.com/hymhub/pdf-vue3#readme",
+  "homepage": "https://github.com/benthegreenshot/pdf-vue3#readme",
   "keywords": [
     "pdf-vue3",
     "pdf",

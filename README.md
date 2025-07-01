@@ -1,10 +1,8 @@
 # pdf-vue3
 
-[English](./README.md) ｜ [中文](./README_ZH.md)
-
 vue3 pdf viewer
 
-example: <https://hymhub.github.io/pdf-vue3/>
+example: <https://benthegreenshot.github.io/pdf-vue3/>
 
 <img src="./pdf-vue3-demo.gif" style="width: 375px;" />
 
@@ -41,6 +39,8 @@ import PDF from "pdf-vue3";
 | `showBackToTopBtn` | Whether to show back to the top button. The default value is `true`. |              `boolean`               |
 | `scrollThreshold`  | Scrolling distance over how much to display the back to top button. The default value is `300`. |               `number`               |
 |     `pdfWidth`     | pdf page width. The default value is `100%`. |               `string`               |
+|     `zoom`     | pdf zoom. The default value is `1`. |               `number`               |
+|     `correctionScale`     | pdf zoom scale correction. The default value is `1`. |               `number`               |
 |      `rowGap`      | Line spacing between pdf pages. The default value is `8`. |               `number`               |
 |       `page`       | Controls the current page number, and supports responsive variables to dynamically change the page number. The default value is `1` | `number` |
 |       `cMapUrl`    | Custom cMapUrl. The default value is `https://unpkg.com/pdfjs-dist@3.7.107/cmaps/` | `string` |

@@ -1,6 +1,6 @@
 <script setup>
 import { ref, watchEffect, onBeforeMount } from "vue";
-import PDF from 'pdf-vue3'
+import PDF from "pdf-vue3";
 
 const isMobile = ref(false);
 
@@ -21,8 +21,11 @@ onBeforeMount(async () => {
 
 <template>
   <div style="width: 100%">
-    <PDF :pdf-width="isMobile ? '100%' : '768'" :row-gap="isMobile ? 4 : 8"
-      src="/mastering_javascript_design_patterns_fragment.pdf">
+    <PDF
+      :pdf-width="isMobile ? '100%' : '768'"
+      :row-gap="isMobile ? 4 : 8"
+      src="/mastering_javascript_design_patterns_fragment.pdf"
+    >
     </PDF>
   </div>
 </template>

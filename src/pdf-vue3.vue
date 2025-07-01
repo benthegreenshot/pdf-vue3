@@ -29,6 +29,8 @@ const props = withDefaults(
     pdfWidth?: string;
     rowGap?: number;
     page?: number;
+    zoom?: number;
+    correctionScale?: number;
     cMapUrl?: string;
   }>(),
   {
@@ -50,6 +52,8 @@ const props = withDefaults(
     pdfWidth: "100%",
     rowGap: 8,
     page: 1,
+    zoom: 1,
+    correctionScale: 1,
     cMapUrl: "https://unpkg.com/pdfjs-dist@3.7.107/cmaps/",
   }
 );
@@ -180,7 +184,9 @@ const renderPDF = async () => {
         ((canvas.parentNode as HTMLDivElement).clientWidth - 4) /
         viewport.width;
       const context = canvas.getContext("2d");
-      const scaledViewport = page.getViewport({ scale: scale * dpr.value });
+      const scaledViewport = page.getViewport({
+        scale: scale * dpr.value * props.zoom * props.correctionScale,
+      });
       canvas.width = scaledViewport.width;
       canvas.height = scaledViewport.height;
       itemHeightList.value[i] = calcH +=
@@ -408,6 +414,7 @@ watch(
             "
             :style="{
               marginBottom: `${rowGap}px`,
+              width: `calc(${100 * zoom}% - 4px)`,
             }"
             v-for="item in totalPages"
             :key="item"
